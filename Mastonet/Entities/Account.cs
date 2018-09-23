@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 
 namespace Mastonet.Entities
 {
@@ -94,5 +95,11 @@ namespace Mastonet.Entities
         /// </summary>
         [JsonProperty("header_static")]
         public string StaticHeaderUrl { get; set; }
+        
+        /// <summary>
+        /// Array of profile metadata field, each element has 'name' and 'value'
+        /// </summary>
+        [JsonProperty("fields")]
+        public IList<Field> Fields { get; set; }
     }
 }
